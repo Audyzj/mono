@@ -3137,6 +3137,8 @@ mono_thread_cleanup (void)
 	mono_os_mutex_destroy (&small_id_mutex);
 	mono_os_event_destroy (&background_change_event);
 #endif
+
+	mono_thread_info_cleanup ();
 }
 
 void
