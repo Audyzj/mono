@@ -3328,6 +3328,8 @@ mono_thread_cleanup (void)
 	mono_os_cond_destroy (&zero_pending_joinable_runtime_thread_event);
 	mono_os_event_destroy (&background_change_event);
 #endif
+
+	mono_thread_info_cleanup ();
 }
 
 void
